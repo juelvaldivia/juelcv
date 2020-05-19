@@ -8,7 +8,7 @@ git:
   depth: 3
 script:
   - yarn build
-  - echo 'url-personaliza.com' > public/CNAME
+  #- echo 'url-personaliza.com' > public/CNAME
 deploy:
   provider: pages
   skip-cleanup: true
