@@ -8,7 +8,7 @@ git:
   depth: 3
 script:
   - yarn build
-  - echo 'https://juelvaldivia.github.io/curriculumvitae' > public/CNAME
+  - echo 'https://juelvaldivia.github.io/curriculumvitae/' > public/CNAME
 deploy:
   provider: pages
   skip-cleanup: true
