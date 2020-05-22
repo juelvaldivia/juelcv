@@ -1,20 +1,26 @@
 import { useState, useEffect} from 'react';
-const api = 'https://us-central1-gndx-cv.cloudfunctions.net/me';
+import { useFirebaseApp, useFirestoreCollection } from 'reactfire';
 
-const useGetData = () => {
+import 'firebase/firestore';
 
-    // estado del componente
+export default (props) => {
+    
     const [mydata, setData] = useState([]);
 
-    // realiza petición al api con fetch
-    useEffect(() => {
-        fetch(api)
-            .then(response => response.json())
-            .then(data => setData(data))
-    }, [])
+    const firebaseApp = useFirebaseApp();
+    const cvRef = firebaseApp
+        .firestore()
+        .collection('cv');
 
-    // regresa la información
+    useEffect(() => {
+
+        cvRef.doc('about').get().then(doc => {
+            if (doc.exists)
+                setData(doc.data());
+        }).catch(err => {
+            console.log('Error getting document', err);
+        });
+    }, []);
+
     return mydata;
 }
-
-export default useGetData;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Main from '../components/Main';
 import Sidebar from '../components/Sidebar';
 import Info from '../components/Info';
@@ -19,15 +19,16 @@ const GlobalStyle = createGlobalStyle`
     }
 `
 
+
 const App = () => {
     
     const data = useGetData();
+
     console.log(data);
 
-    return data.length === 0 ? <h1>Cargando</h1> : (
+    return data.length === 0 ? <h1>Cargando...</h1> : (
         <Main>
             <GlobalStyle/>
-
             <Sidebar>
                 <About 
                     avatar={data.avatar}
@@ -38,7 +39,7 @@ const App = () => {
                     social={data.social}
                 />
             </Sidebar>            
-            <Info>
+            {/* <Info>
                 <Education 
                     data={data.education}
                 />
@@ -51,7 +52,7 @@ const App = () => {
                 <Skills
                     data= {data.skills}
                 />
-            </Info>
+            </Info> */}
         </Main>
     );
 }
