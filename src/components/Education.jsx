@@ -3,6 +3,7 @@ import React from 'react';
 const Education = props => (
     <div className='Education'>
         <div className='Education-container'>
+
             {
                 props.data.map((item, index) => (
 

@@ -24,20 +24,35 @@ const SocialAnchor = styled.a`
 const SocialIcon = styled.i`
     color: ${props => props.theme.color}
 `
+// const facebook = {
+//     color: '#3b5998'
+// }
+
+// const twitter = {
+//     color: '#38A1F3'
+// }
+
+// const linkedin = {
+//     color: '#0e76a8'
+// }
+
+// const github = {
+//     color: '#fff'
+// }
 const facebook = {
-    color: '#3b5998'
+    color: '#5998df'
 }
 
 const twitter = {
-    color: '#38A1F3'
+    color: '#5998df'
 }
 
 const linkedin = {
-    color: '#0e76a8'
+    color: '#5998df'
 }
 
 const github = {
-    color: '#333'
+    color: '#5998df'
 }
 
 // Regresa el color de cada red social

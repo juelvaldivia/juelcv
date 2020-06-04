@@ -11,15 +11,10 @@ const Experience = props => (
                         <h3>{item.jobTitle} {item.company}
                             <span>{item.startDate} - {item.endDate}</span>
                         </h3>
-                        <p>{item.jobDescription}</p>
+                        <p>{item.description}</p>
                     </div>
                 ))
             }
-
-            <div className='Experience-item'>
-                <h3>Name</h3>
-                <p>aprendí muchas cosas</p>
-            </div>
         </div>
     </div>
 );

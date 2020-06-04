@@ -1,11 +1,20 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const SideBarStyled = styled.div`
+    height: 100%;
+`;
+
+const SideBarContainerStyled = styled.div`
+    height: 100%;
+`;
 
 const Sidebar = ({ children }) => (
-    <div className="Sidebar">
-        <div className="Sidebar-container">
+    <SideBarStyled>
+        <SideBarContainerStyled>
             {children}
-        </div>
-    </div>
+        </SideBarContainerStyled>
+    </SideBarStyled>
 );
 
 export default Sidebar;

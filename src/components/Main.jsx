@@ -6,6 +6,7 @@ const MainStyled = styled.div`
     grid-template-columns: minmax(auto, 1024px)
     justify-content: center;
     padding: 1em;
+    height: 100%;
 `;
 
 const MainContainer = styled.div`
