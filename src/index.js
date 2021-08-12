@@ -1,7 +1,7 @@
 // se importan librerías incluyendo React
 import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom'
-// import App from './containers/App';
+
 import {
     FirebaseAppProvider
 } from 'reactfire';
